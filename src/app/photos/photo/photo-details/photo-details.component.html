@@ -1,0 +1,30 @@
+<mat-dialog-actions align="end">
+    <button mat-icon-button (click)="close()">
+        <mat-icon>close</mat-icon>
+    </button>
+</mat-dialog-actions>
+<div class="row">
+    <div class="col-md-6">
+        <img class="photo" [src]="photo.path" />
+    </div>
+    <div class="col-md-6">
+        <h1>Voici la liste des tags de la photo</h1>
+        <mat-form-field class="full-width">
+            <mat-chip-list #chipList>
+                <mat-chip *ngFor="let tag of photo.tags"
+                    [selectable]="selectable"
+                    [removable]="removable"
+                    (removed)="remove(tag)">
+                    {{ tag }}
+                    <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+                </mat-chip>
+                <input
+                    placeholder="New tag..."
+                    [matChipInputFor]="chipList"
+                    [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                    [matChipInputAddOnBlur]="addOnBlur"
+                    (matChipInputTokenEnd)="add($event)">
+            </mat-chip-list>
+        </mat-form-field>
+    </div>
+</div>

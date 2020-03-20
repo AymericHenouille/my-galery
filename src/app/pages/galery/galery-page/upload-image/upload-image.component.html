@@ -1,0 +1,4 @@
+<img *ngIf="selectedFile" [src]="selectedFile" />
+<label>
+    <input type="file" (change)="detectFile($event)" />
+</label>
