@@ -1,4 +1,8 @@
 <mat-toolbar color="primary">
     <span>{{ title }}</span>
+    <nav>
+        <a [routerLink]="['/galery']" [routerLinkActive]="'active'">Galery</a>
+        <a [routerLink]="['/login']" [routerLinkActive]="'active'">Login</a>
+    </nav>
 </mat-toolbar>
 <router-outlet></router-outlet>

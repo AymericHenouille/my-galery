@@ -1,5 +1,35 @@
+$max: 25;
+
 .frame {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
+
+    @for $var from 0 to $max {
+        .pop-#{$var} {
+            opacity: 0;
+            animation-name: pop;
+            animation-duration: 1s;
+            animation-delay: $var * 0.2s;
+            animation-fill-mode: forwards;
+            opacity: 0;
+        }
+    }
+
+}
+
+@keyframes pop {
+    0% {
+        opacity: 0;
+        transform: rotateY(200deg);
+    }
+
+    50% {
+        transform: rotateY(400deg);
+    }
+
+    100% {
+        transform: rotateY(360deg);
+        opacity: 1;
+    }
 }

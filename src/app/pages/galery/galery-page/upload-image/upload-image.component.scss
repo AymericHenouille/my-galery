@@ -1,0 +1,49 @@
+$accent: #FF4081;
+$shadow: #CCC;
+
+.box {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+
+    h1 {
+        font-weight: bold;
+    }
+
+    .label-file {
+        cursor: pointer;
+        color: $accent;
+        font-weight: bold;
+        padding: 1em;
+        display: block;
+        border-radius: 0.5em;
+        transition: 0.2s;
+
+        &:hover {
+            color: $shadow;
+            background: $accent;
+            box-shadow: 10px 5px 5px $shadow;
+        }
+    }
+
+    .full-width {
+        width: 65%;
+    }
+
+    > * {
+        margin: 10px;
+    }
+}
+
+.spinner {
+    text-align: center;    
+    &, * {
+        display: block;
+        margin: auto;
+        width: 100%;
+    }
+}
+
+.input-file {
+    display: none;
+}

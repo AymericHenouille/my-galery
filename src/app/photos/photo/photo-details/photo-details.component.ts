@@ -19,7 +19,7 @@ export class PhotoDetailsComponent {
 
   constructor(public dialogRef: MatDialogRef<PhotoDetailsComponent>, @Inject(MAT_DIALOG_DATA) public photo: Photo) { }
 
-  add(event: MatChipInputEvent): void {
+  public add(event: MatChipInputEvent): void {
     const input = event.input;
     const value = event.value;
 
@@ -34,7 +34,7 @@ export class PhotoDetailsComponent {
     }
   }
 
-  remove(tag: string): void {
+  public remove(tag: string): void {
     const index = this.photo.tags.indexOf(tag);
 
     if (index >= 0) {
