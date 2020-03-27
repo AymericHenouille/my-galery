@@ -121,6 +121,10 @@
               "devServerTarget": "my-galery:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
     }

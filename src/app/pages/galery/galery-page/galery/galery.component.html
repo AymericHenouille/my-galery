@@ -1,5 +1,5 @@
 <div class="frame">
-    <app-photo *ngFor="let photo of photos | async ; let i = index" 
+    <app-photo *ngFor="let photo of photos | async; let i = index" 
     [photo]="photo"
     [class]="'pop-' + (i % 25)"></app-photo>
 </div>

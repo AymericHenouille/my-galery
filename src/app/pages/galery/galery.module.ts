@@ -6,6 +6,7 @@ import { PhotosModule } from 'src/app/photos/photos.module';
 import { GaleryRoutingModule } from './galery-routing.module';
 import { MaterialModule } from 'src/app/material/material.module';
 import { UploadImageComponent } from './galery-page/upload-image/upload-image.component';
+import { FireModule } from 'src/app/fire/fire.module';
 
 
 
@@ -15,6 +16,7 @@ import { UploadImageComponent } from './galery-page/upload-image/upload-image.co
     CommonModule,
     PhotosModule,
     MaterialModule,
+    FireModule,
     GaleryRoutingModule
   ]
 })

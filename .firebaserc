@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "my-galery-aacc3": {
+      "hosting": {
+        "my-galery": [
+          "my-galery-aacc3"
+        ]
+      }
+    }
+  }
+}
